@@ -8,7 +8,7 @@
 
     if(isset($_POST['btn'])){
         $user=$_POST['user'];
-        $pass=$_POST['pass'];
+        $pass=md5($_POST['pass']);
         $sql="INSERT INTO tbluser(user,pass) VALUES('$user','$pass')";
         $result=mysqli_query($conn, $sql);
     }
